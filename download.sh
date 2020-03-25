@@ -9,7 +9,7 @@ has() {
 # curl を使用する
 if has "curl"; then
 
-    curl -0L https://github.com/shunnagahara/dotfiles/archive/master.tar.gz
+    curl -L https://github.com/shunnagahara/dotfiles/archive/master.tar.gz
 
     # 解凍する
     tar zxf master.tar.gz -C ~
