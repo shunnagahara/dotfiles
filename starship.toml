@@ -1,0 +1,24 @@
+add_newline = false
+ 
+[character]
+
+[directory]
+truncation_length = 99
+
+[git_branch]
+symbol = ""
+
+[package]
+disabled = true
+
+[php]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[golang]
+disabled = true
+
+[git_status]
+disabled = true
