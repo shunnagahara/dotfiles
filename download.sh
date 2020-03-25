@@ -6,17 +6,10 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
-# git が使えるなら git
-if has "git"; then
-    git clone --recursive "https://github.com/shunnagahara/dotfiles.git"
+# curl を使用する
+if has "curl"; then
 
-# 使えない場合は curl を使用する
-elif has "curl"; then
-
-    if has "curl"; then
-        curl -0L https://github.com/shunnagahara/dotfiles/archive/master.tar.gz
-
-    fi
+    curl -0L https://github.com/shunnagahara/dotfiles/archive/master.tar.gz
 
     # 解凍する
     tar zxf master.tar.gz -C ~
