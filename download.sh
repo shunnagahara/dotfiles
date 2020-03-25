@@ -10,27 +10,26 @@ has() {
 if has "git"; then
     git clone --recursive "https://github.com/shunnagahara/dotfiles.git"
 
-# 使えない場合は curl か wget を使用する
-elif has "curl" || has "wget"; then
-    tarball="https://github.com/shunnagahara/dotfiles/archive/master.tar.gz"
+# 使えない場合は curl を使用する
+elif has "curl"; then
 
-    # どっちかでダウンロードして，tar に流す
     if has "curl"; then
-        curl -L "$tarball"
+        curl -0L https://github.com/shunnagahara/dotfiles/archive/master.tar.gz
 
-    elif has "wget"; then
-        wget -O - "$tarball"
+    fi
 
-    fi | tar zxv
+    # 解凍する
+    tar zxf master.tar.gz -C ~
 
     # 解凍したら，DOTPATH に置く
-    mv -f dotfiles-master "$DOTPATH"
+    mv -f ~/dotfiles-master "$DOTPATH"
 
 else
-    die "curl or wget required"
+    die "curl required"
 fi
 
 cd ~/dotfiles
+
 if [ $? -ne 0 ]; then
     die "Not found: $DOTPATH"
 else
