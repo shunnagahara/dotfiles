@@ -91,6 +91,9 @@ done
 brew cleanup
 brew cask cleanup
 
+chsh -s $(which zsh)
+echo 'default shell zsh changed...'
+
 cat << END
 
 **************************************************
