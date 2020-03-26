@@ -6,6 +6,10 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
+echo "###############################################"
+echo "DOTFILES DOWNLOAD START!"
+echo "###############################################"
+
 # curl を使用する
 if has "curl"; then
 
@@ -21,10 +25,14 @@ tar zxf master.tar.gz -C ~
 # 解凍したら，DOTPATH に置く
 mv -f ~/dotfiles-master "$DOTPATH"
 
-cd ~/dotfiles
+# tar を削除する
+rm -rf ~/master.tar.gz
 
+cd ~/dotfiles
 if [ $? -ne 0 ]; then
     die "Not found: $DOTPATH"
-else
-    echo "You're at dotfiles directory"
 fi
+
+echo "###############################################"
+echo "DOTFILES DOWNLOAD FINISH!"
+echo "###############################################"
