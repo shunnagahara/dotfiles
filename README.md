@@ -2,19 +2,17 @@
 
 This repository for Mac's environment setup
 
-## premise
+## attention
 
-On the premise that you need a git to setup
+if you have made your dotfiles
 
-At first, you should install a git
+please back up your dotfiles
 
 ## setup
 
-```
-$ cd ~
-$ git clone https://github.com/shunnagahara/dotfiles.git
-$ cd dotfiles
-$ chmod 755 deploy.sh init.sh
+```shellscript
+$ curl -L raw.github.com/shunnagahara/dotfiles/master/download.sh | bash
+$ cd ~/dotfiles
 $ ./init.sh
 $ ./deploy.sh
 ```
