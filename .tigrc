@@ -1,0 +1,25 @@
+# main view の左端にコミットIDを表示する
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
+# マウスを有効にする
+set mouse = true
+
+# カラー設定
+# diff-view で境界が見やすくなるように変更
+color  diff-header       default magenta
+
+# c で commit ID をクリップボードにコピー (Mac用)
+bind generic c      @bash -c "echo -n '%(commit)' | pbcopy"
+
+# 縦分割に強制する
+set vertical-split = yes
+
+# リフレッシュするタイミング
+set refresh-mode = auto
+#set refresh-mode = after-command
+#set refresh-mode = periodic
+#set refresh-interval = 1
+
+# n / p を上下移動に割り当て
+bind generic /      scroll-line-up
+bind generic _      scroll-line-down
