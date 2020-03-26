@@ -6,10 +6,6 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
-echo "###############################################"
-echo "DOTFILES DOWNLOAD START!"
-echo "###############################################"
-
 # curl を使用する
 if has "curl"; then
 
@@ -24,6 +20,9 @@ tar zxf master.tar.gz -C ~
 
 # 解凍したら，DOTPATH に置く
 mv -f ~/dotfiles-master "$DOTPATH"
+
+# 権限付与
+chmod 755 ~/dotfiles/init.sh ~/dotfiles/deploy.sh
 
 # tar を削除する
 rm -rf ~/master.tar.gz
