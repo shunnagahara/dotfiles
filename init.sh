@@ -78,6 +78,7 @@ casks=(
     docker
     visual-studio-code
     clipy
+    day-o
     sequel-pro
     sourcetree
     postman
