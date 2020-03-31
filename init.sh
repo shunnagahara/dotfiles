@@ -66,6 +66,7 @@ done
 casks=(
     dropbox
     evernote
+    adobe-acrobat-reader
     google-chrome
     google-japanese-ime
     slack
