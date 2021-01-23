@@ -1,3 +1,12 @@
+HISTFILE=~/.zsh_history
+SAVEHIST=100000
+
+setopt auto_cd
+setopt hist_ignore_dups
+setopt correct
+setopt hist_ignore_all_dups
+setopt nolistbeep
+
 # starship config
 eval "$(starship init zsh)"
 
