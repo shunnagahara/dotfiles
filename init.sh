@@ -57,6 +57,8 @@ brew tap homebrew/apache
 brew tap sanemat/font
 brew tap motemen/ghq
 brew tap mpppk/mpppk
+brew tap homebrew/cask-fonts
+
 
 echo "start brew install apps..."
 for formula in "${formulas[@]}"; do
@@ -83,6 +85,7 @@ casks=(
     sourcetree
     postman
     spectacle
+    font-hack-nerd-font
 )
 
 echo "start brew cask install apps..."
