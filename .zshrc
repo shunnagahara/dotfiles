@@ -22,6 +22,7 @@ alias viz='vi ~/.zshrc'
 alias vienv='vi ~/.zshenv'
 alias sz='source ~/.zshrc'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
 # git alias
 alias gcheck='git checkout $(git branch | peco)'
