@@ -47,6 +47,7 @@ formulas=(
     ripgrep
     ghq
     hlb
+    lsd
 )
 
 "brew tap..."
