@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository for Mac's environment setup
+This repository provides the setup for Shun Nagahara's Mac environment
 
 ## attention
 
