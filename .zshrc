@@ -10,11 +10,6 @@ setopt nolistbeep
 # starship config
 eval "$(starship init zsh)"
 
-# enhancd config
-if [ -f $(echo $DOT_DIR)/enhancd/init.sh ]; then
-    source $(echo $DOT_DIR)/enhancd/init.sh
-fi
-
 # normal alias
 alias ll='exa -la'
 alias etree='exa -l --tree'
@@ -67,3 +62,6 @@ bindkey '^R' peco-select-history
 
 # my profile
 cat $(echo $DOT_DIR)/ansize/tuba.ascii
+
+# enhancd config
+source $(echo $ENHANCD_DIR)/init.sh
